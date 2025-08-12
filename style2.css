@@ -1,0 +1,123 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg_heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.heart {
+    position: absolute;
+    top: -50%;
+    background-image: url("cat2.gif");
+    background-size: cover;
+    /* -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg); */
+}
+
+.another{
+    background-image: url("cat1.jpg");
+}
+/* 
+.heart:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.heart:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+} */
+
+@-webkit-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-moz-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@-ms-keyframes love {
+    0% {
+        top: 110%
+    }
+}
+
+@keyframes love {
+    0% {
+        top: 110%
+    }
+}
+#title2 {
+    text-align: center;
+    padding: 40vh 0;
+    color: #c33;
+    font-family: monospace;
+    animation: fadein 10s;
+    -moz-animation: fadein 10s; /* Firefox */
+    -webkit-animation: fadein 10s; /* Safari and Chrome */
+    -o-animation: fadein 10s; /* Opera */
+}
+
+#later{
+    visibility: hidden;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

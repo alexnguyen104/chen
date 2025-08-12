@@ -1,0 +1,147 @@
+*{
+  font-family: monospace;
+}
+body {
+  /* padding:100px 0; */
+  height: 100vh;
+  background-color: #c33;
+  overflow: hidden;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#title {
+  text-align: center;
+  color: #fff;
+}
+
+#sus {
+  display: none;
+}
+
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  animation: heartbeat 1s infinite;
+  cursor: pointer;
+  background-image: url("freki.jpg");
+  background-size: cover;
+  border: none;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(.75);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(.75);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(.75);
+  }
+
+  100% {
+    transform: scale(.75);
+  }
+}
+
+.nenmodal .nenmodal2 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+}
+
+/* CSS bảng nội dung Modal */
+.nenmodal .ndmodal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  width: 600px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 20px;
+  display: block;
+  position: fixed;
+  box-shadow: 0px 0px 10px #111;
+}
+
+@media (max-width: 700px) {
+  .nenmodal .ndmodal {
+    width: 90%;
+  }
+}
+
+/* CSS bao bọc của nút tắt Modal */
+.nenmodal .closemodal {
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+/* CSS tieu de của Modal */
+.titlemodal {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.nenmodal.active .nenmodal2 {
+  display: block;
+}
+
+/* CSS hiệu ứng hiển thị Modal */
+.nenmodal.active .ndmodal {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+button{
+  border: none;
+}
+
+#modalcontent button{
+  color: #fff;
+  border-radius: 5px;
+  width: 100px ;
+  padding: 20px 0 20px 0;
+  cursor:pointer;
+  margin: 10px;
+}
+
+#no{
+  background-color: #c33;
+}
+
+#yes{
+  background-color: green;
+}

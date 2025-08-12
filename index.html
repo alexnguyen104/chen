@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Chen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.jpeg" type="image/x-icon">
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.birds.min.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            VANTA.BIRDS({
+                el: "#vanta",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 1000.00,
+                minWidth: 1000.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                backgroundAlpha: 0.0,
+                color2: 0xffffff,
+                colorMode: "lerpGradient",
+                separation: 70.00,
+                quantity: 4.00
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- <audio autoplay>
+        <source src="/music/y2mate.com - Bruno Major  Nothing Lyric  Chord Video.mp3" type="audio/mp3">
+    </audio> -->
+    <div id="vanta">
+    </div>
+    <div class="nenmodal active" id="nenmodal-1">
+        <div class="nenmodal2"></div>
+        <div class="ndmodal">
+            <div class="titlemodal">CÂU HỎI NGÀY 22/8<br><br>Chen thấy cái này quen không đó?<span id="sus1"
+                    style="display: none;"> 💕</span><br><br></div>
+            <div id="modalcontent">
+                <button onclick="alert('ơ... dat sad...')" id="no">Không Phải</button>
+                <button id="yes">Phải</button>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <h1 id="title">Chen bấm vào cái nút ở giữa đi<span id="sus"> 😍</span></h1>
+        <button onclick="buttonClicked()" style="background: none; border:none">
+            <div id="heart"></div>
+        </button>
+    </div>
+    
+    <script>
+        icon = document.getElementById("sus")
+        heart = document.getElementById("heart")
+        sus = document.getElementById("sus1")
+        yes = document.getElementById("yes")
+        modal = document.getElementById("nenmodal-1")
+        audio1 = new Audio("/music/nothing-2.mp3")
+
+        yes.onmouseover = function () {
+            sus.style.display = "inline"
+        }
+
+        yes.onmouseout = function () {
+            sus.style.display = "none"
+        }
+
+        yes.onclick = function () {
+            modal.classList.remove("active")
+            audio1.play()
+            audio1.volume = 0.8;
+        }
+
+        heart.onmouseover = function () {
+            icon.style.display = "inline"
+        }
+
+        heart.onmouseout = function () {
+            icon.style.display = "none"
+        }
+
+        function buttonClicked() {
+            document.location = "main.html"
+        }
+    </script>
+</body>
+
+</html>
